@@ -1,4 +1,7 @@
+import { useState } from "react"
+
 export default function Main() {
+    const [selectedPayment, setSelectedPayment] = useState("credit");
     return (<>
         <div className="main">
             <h1 className="">CHECKOUT</h1>
@@ -49,26 +52,60 @@ export default function Main() {
             </div>
             <div className="paymentdetails">
                 <div className="paymentdetails__top">
-                    <div><h3>Payment Method</h3></div>
+                    <div>
+                        <h3>Payment Method</h3>
+                    </div>
+
                     <div className="paymentdetails__top__check">
                         <div className="paymentdetails__top__check__group">
                             <div className="paymentdetails__top__check__group__e">
-                                <input type="radio" name="payment" value="credit" id="credit" />
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="credit"
+                                    id="credit"
+                                    checked={selectedPayment === "credit"}
+                                    onChange={(e) => setSelectedPayment(e.target.value)}
+                                />
                                 <label htmlFor="credit">e-Money</label>
                             </div>
+
                             <div className="paymentdetails__top__check__group__cash">
-                                <input type="radio" name="payment" value="paypal" id="paypal" />
-                                <label htmlFor="paypal">Cash on Delivery</label>
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="cash"
+                                    id="cash"
+                                    checked={selectedPayment === "cash"}
+                                    onChange={(e) => setSelectedPayment(e.target.value)}
+                                />
+                                <label htmlFor="cash">Cash on Delivery</label>
                             </div>
-
-                        </div>
-
-                        <div>
-
                         </div>
                     </div>
                 </div>
 
+                <div className="paymentdetails__content">
+                    {selectedPayment === "credit" ? (
+                        <div className="e-money-inputs">
+                            <div>
+                                <h3>e-Money Number</h3>
+                                <input type="text" placeholder="238521993" />
+                            </div>
+                            <div>
+                                <h3>e-Money PIN</h3>
+                                <input type="text" placeholder="6891" />
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="cash-info">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                                facilisis eros in libero viverra, vel consequat nisl tincidunt.
+                            </p>
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     </>
