@@ -49,8 +49,10 @@ export default function ProductDetail() {
         console.log("eklendi");
         alert("eklendi")
         
+        
     };
-
+    console.log(product);
+    
     return (
         <>
             <div className="product__detail">
@@ -68,7 +70,7 @@ export default function ProductDetail() {
                             <button onClick={miktarartı}>+</button>
                         </div>
                         <div className="product__detail__description__quantity__r">
-                            <button onClick={handleAddToCart}>Satın al</button>
+                            <button onClick={handleAddToCart}>ADD TO CART</button>
                         </div>
                     </div>
                 </div>

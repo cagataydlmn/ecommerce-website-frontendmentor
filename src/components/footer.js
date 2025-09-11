@@ -19,7 +19,7 @@ export default function Footer(){
                 <Link to="/"onClick={() => window.scrollTo(0, 0)}>HOME</Link>
                 <Link to="/headphones" onClick={() => window.scrollTo(0, 0)}>HEADPHONE</Link>
                 <Link to="/speakers"onClick={() => window.scrollTo(0, 0)}>SPEAKERS</Link>
-                <Link to="/earphhonesonClick={() => window.scrollTo(0, 0)}">EARPHONES</Link>
+                <Link to="/earphones"onClick={() => window.scrollTo(0, 0)}>EARPHONES</Link>
                 </div>
             </div>
         </footer>
