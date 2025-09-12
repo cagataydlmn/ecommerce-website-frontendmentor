@@ -43,7 +43,7 @@ export default function Order({ onPay, formValid }) {
         <div className="total__general">
           <div className="total__general__title">TOTAL</div>
           <div className="total__general__price">
-            $ {items.reduce((acc, item) => acc + item.total, 0)}
+          $ {items.reduce((acc, item) => acc + item.price * item.quantity, 0)}
           </div>
         </div>
       </div>

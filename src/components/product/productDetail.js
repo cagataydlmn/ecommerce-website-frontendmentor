@@ -41,16 +41,15 @@ export default function ProductDetail() {
             id: product.id,
             name: product.name,
             price: product.price,
-            quantity: quantity,
+            quantity: quantity, // state’ten al
             image: product.image,
-            total:product.price * quantity
+            total: product.price * quantity // doğru hesap
         };
         dispatch(addToCart(item));
         console.log("eklendi");
-        alert("eklendi")
-        
-        
+        alert("eklendi");
     };
+    
     console.log(product);
     
     return (
