@@ -17,10 +17,4 @@ Kullanıcılar ürünleri görüntüleyebilir, detay sayfasına geçebilir ve ü
 - SCSS ile modüler tasarım
 - Mobil uyumlu (responsive) arayüz
 
-## 📷 Ekran Görüntüsü
-![E-commerce Preview](./screenshot.png)
-
-## ⚙️ Kurulum
-1. Repoyu klonla:
-   ```bash
-   git clone https://github.com/kullanici-adi/proje-adi.git
+https://frontend-mentor-ecommerce-cagatay.netlify.app/
